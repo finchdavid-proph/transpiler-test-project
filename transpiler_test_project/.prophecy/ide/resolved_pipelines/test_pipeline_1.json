@@ -1,0 +1,57 @@
+{
+  "id" : "test_pipeline_1",
+  "metainfo" : {
+    "label" : "test_pipeline_1",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : false,
+    "processesVsModelFiles" : {
+      "7z-qQEIG8Dvep8DMamcT4$$p_aTQLorQTpn4pDpEsyAq" : "models/test_pipeline_1/test_pipeline_1__customer_orders.sql",
+      "Hh3gnxKHKaxnU8FdREHwO$$vsAHtKVZd_ymE7lz_71iv" : "models/test_pipeline_1/test_pipeline_1__customer_orders.sql",
+      "customer_orders_x2-Xl4S6p-0Gxd0qniEoy$$4358IUiNesaj3Yb7dPHER" : "models/test_pipeline_1/test_pipeline_1__customer_orders.sql",
+      "7jyFL1h_FnpkVNZNdHu61$$f0OotpRhZNnWi0P79lxCx" : "models/test_pipeline_1/test_pipeline_1__customer_orders.sql",
+      "XH9BZm1Glx9iQj_veeFhs$$ZZgFAF7PoqWAQRAs2omds" : "models/test_pipeline_1/test_pipeline_1__customer_orders.sql"
+    }
+  },
+  "processes" : {
+    "XH9BZm1Glx9iQj_veeFhs$$ZZgFAF7PoqWAQRAs2omds" : {
+      "id" : "XH9BZm1Glx9iQj_veeFhs$$ZZgFAF7PoqWAQRAs2omds",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "test_pipeline_1__customer_orders",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "test_pipeline_1__customer_orders"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "customer_orders_x2-Xl4S6p-0Gxd0qniEoy$$4358IUiNesaj3Yb7dPHER", "XH9BZm1Glx9iQj_veeFhs$$ZZgFAF7PoqWAQRAs2omds", "7jyFL1h_FnpkVNZNdHu61$$f0OotpRhZNnWi0P79lxCx", "Hh3gnxKHKaxnU8FdREHwO$$vsAHtKVZd_ymE7lz_71iv", "7z-qQEIG8Dvep8DMamcT4$$p_aTQLorQTpn4pDpEsyAq" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "test_pipeline_1__customer_orders_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "test_pipeline_1__customer_orders_in_1",
+          "slug" : "in_1"
+        } ],
+        "outputs" : [ {
+          "id" : "test_pipeline_1__customer_orders_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ ],
+  "component" : "Pipeline"
+}

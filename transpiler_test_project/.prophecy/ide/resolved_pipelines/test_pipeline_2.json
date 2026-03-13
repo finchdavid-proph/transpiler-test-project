@@ -1,0 +1,57 @@
+{
+  "id" : "test_pipeline_2",
+  "metainfo" : {
+    "label" : "test_pipeline_2",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : false,
+    "processesVsModelFiles" : {
+      "ndRBvBHqWSmoPbx5QlqJX$$Y5YVlShWUZJBNkzWPWBK0" : "models/test_pipeline_2/test_pipeline_2__customer_orders.sql",
+      "zU3Ij04j0ZOKWX0Cv9UtS$$XH-nF5gcx1BIVk8R06Y6j" : "models/test_pipeline_2/test_pipeline_2__customer_orders.sql",
+      "mbAs61c57Sy6XUO97z0DP" : "models/test_pipeline_2/test_pipeline_2__customer_orders.sql",
+      "lV5s_JIaw-D6IndoDIz53" : "models/test_pipeline_2/test_pipeline_2__customer_orders.sql",
+      "customer_orders_E8BIUd_llUf8jSxocmSr_$$7UNsI7UxWb3OKKGx78zyc" : "models/test_pipeline_2/test_pipeline_2__customer_orders.sql"
+    }
+  },
+  "processes" : {
+    "ndRBvBHqWSmoPbx5QlqJX$$Y5YVlShWUZJBNkzWPWBK0" : {
+      "id" : "ndRBvBHqWSmoPbx5QlqJX$$Y5YVlShWUZJBNkzWPWBK0",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "test_pipeline_2__customer_orders",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "test_pipeline_2__customer_orders"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "customer_orders_E8BIUd_llUf8jSxocmSr_$$7UNsI7UxWb3OKKGx78zyc", "ndRBvBHqWSmoPbx5QlqJX$$Y5YVlShWUZJBNkzWPWBK0", "zU3Ij04j0ZOKWX0Cv9UtS$$XH-nF5gcx1BIVk8R06Y6j", "lV5s_JIaw-D6IndoDIz53", "mbAs61c57Sy6XUO97z0DP" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "test_pipeline_2__customer_orders_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "test_pipeline_2__customer_orders_in_1",
+          "slug" : "in_1"
+        } ],
+        "outputs" : [ {
+          "id" : "test_pipeline_2__customer_orders_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ ],
+  "component" : "Pipeline"
+}
