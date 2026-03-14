@@ -1,66 +1,13 @@
 {{
   config({    
-    "materialized": "ephemeral",
-    "database": "prophecy-field",
-    "schema": "nadeesh_demos"
+    "materialized": "ephemeral"
   })
 }}
 
-WITH Table_1 AS (
-
-  SELECT * 
-  
-  FROM {{ source('prophecy_field_abhinav_demos', 'orders') }}
-
-),
-
-Table_0 AS (
-
+WITH src_customers AS (
   SELECT * 
   
   FROM {{ source('prophecy_field_abhinav_demos', 'customers') }}
-
-),
-
-Join_1 AS (
-
-  {#Combines customer profiles with their order details for a complete view of customer activity.#}
-  SELECT 
-    in0.customer_id AS customer_id,
-    in0.first_name AS first_name,
-    in0.last_name AS last_name,
-    in0.phone AS phone,
-    in0.email AS email,
-    in0.country_code AS country_code,
-    in0.account_open_date AS account_open_date,
-    in0.account_flags AS account_flags,
-    in1.order_id AS order_id,
-    in1.order_status AS order_status,
-    in1.order_category AS order_category,
-    in1.order_date AS order_date,
-    in1.amount AS amount
-  
-  FROM Table_0 AS in0
-  INNER JOIN Table_1 AS in1
-     ON in1.customer_id = in0.customer_id
-
-),
-
-customer_orders AS (
-
-  {#Lists customer orders with details such as status, date, category, and amount for each order.#}
-  SELECT 
-    customer_id AS customer_id,
-    order_id AS order_id,
-    order_status AS order_status,
-    order_date AS order_date,
-    order_category AS order_category,
-    amount AS amount
-  
-  FROM Join_1 AS in0
-
 )
 
-SELECT *
-
-FROM customer_orders
+SELECT * FROM src_customers

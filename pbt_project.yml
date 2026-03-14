@@ -1,0 +1,198 @@
+name: transpiler_test_project
+description: ''
+version: '1'
+author: finch.david@prophecy.io
+language: sql
+buildSystem: ''
+buildSystemDetails: null
+pipelines: {}
+datasets: {}
+templates: {}
+jobs: {}
+gemContainer:
+  languageVersion: ''
+  gemLibsVersion: ''
+  gems: {}
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2026-03-13 17:40:14'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+  airflowFunctions: {}
+  businessRules: {}
+subgraphs: {}
+sqlModels: {}
+sqlSnapshots: {}
+sqlTests: {}
+sqlMacros:
+  .prophecy/metadata/sqlmacros/generate_schema_name:
+    name: generate_schema_name
+    macroType: expression
+    description: null
+    author: finch.david@prophecy.io
+    files:
+    - macros/generate_schema_name.sql
+    - .prophecy/ide/macros/generate_schema_name.json
+    createdAt: '2026-03-13 17:40:16'
+  .prophecy/metadata/sqlmacros/prophecy_tmp_source:
+    name: prophecy_tmp_source
+    macroType: expression
+    description: null
+    author: finch.david@prophecy.io
+    files:
+    - macros/prophecy_tmp_source.sql
+    - .prophecy/ide/macros/prophecy_tmp_source.json
+    createdAt: '2026-03-13 17:40:32'
+sqlSeeds: {}
+sqlSources:
+  .prophecy/metadata/sqlsources/prophecy_field_abhinav_demos:
+    name: prophecy_field_abhinav_demos
+    description: null
+    author: finch.david@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2026-03-13 17:41:38'
+    tables:
+    - name: customers
+      schema:
+        entityType: ''
+        providerType: bigquery
+        fields:
+        - name: customer_id
+          dataType:
+            type: Integer
+          description: Unique identifier assigned to each customer.
+        - name: first_name
+          dataType:
+            type: String
+          description: Customer's given name.
+        - name: last_name
+          dataType:
+            type: String
+          description: Customer's family name.
+        - name: phone
+          dataType:
+            type: String
+          description: Customer's contact phone number.
+        - name: email
+          dataType:
+            type: String
+          description: Customer's email address.
+        - name: country_code
+          dataType:
+            type: String
+          description: Country code representing the customer's country of residence.
+        - name: account_open_date
+          dataType:
+            type: Date
+          description: Date when the customer's account was opened.
+        - name: account_flags
+          dataType:
+            type: String
+          description: Flags indicating special attributes or statuses associated
+            with the customer's account.
+      description: Customer profiles capturing contact details, account status, and
+        key identifiers for business operations.
+      author: finch.david@prophecy.io
+      createdAt: '2026-03-13 17:41:38'
+      tableType: table
+    - name: orders
+      schema:
+        entityType: ''
+        providerType: bigquery
+        fields:
+        - name: order_id
+          dataType:
+            type: Integer
+          description: Unique identifier for each order placed.
+        - name: customer_id
+          dataType:
+            type: Integer
+          description: Unique identifier for the customer who placed the order.
+        - name: order_status
+          dataType:
+            type: String
+          description: Current status of the order, such as pending, completed, or
+            cancelled.
+        - name: order_category
+          dataType:
+            type: String
+          description: Category or type of the order, indicating the nature of the
+            purchase.
+        - name: order_date
+          dataType:
+            type: Date
+          description: Date when the order was placed.
+        - name: amount
+          dataType:
+            type: Float
+          description: Total value of the order placed by the customer.
+      description: Captures customer order transactions, supporting analysis of sales
+        performance and order trends.
+      author: finch.david@prophecy.io
+      createdAt: '2026-03-13 17:47:12'
+      tableType: table
+sqlUnreferencedSources: {}
+sqlPipeline:
+  name: sqlPipeline
+  description: null
+  author: finch.david@prophecy.io
+  createdAt: '2026-03-13 17:40:14'
+dependencies: []
+projectDependencies:
+  '78064':
+    projectUID: 78064
+    projectName: prophecy_basics
+    repositoryPath: gitUri=https://github.com/prophecy-io/prophecy-basics&subPath=
+    version: 1.0.7
+    isDefault: true
+    author: null
+    createdAt: '2026-03-13 17:40:13'
+flags:
+  shouldAddDefaultDependenciesIfAbsent: false
+pipelineConfigurations: {}
+projectConfigurations: {}
+sqlOrchestratorPipelines:
+  .prophecy/metadata/sqlorchestratorpipeline/test_pipeline_1:
+    name: test_pipeline_1
+    schema: null
+    description: null
+    author: finch.david@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/test_pipeline_1.json
+    - pipelines/test_pipeline_1.py
+    - models/test_pipeline_1/test_pipeline_1__customer_orders.sql
+    - models/test_pipeline_1/schema.yml
+    createdAt: '2026-03-13 17:40:32'
+  .prophecy/metadata/sqlorchestratorpipeline/test_pipeline_2:
+    name: test_pipeline_2
+    schema: null
+    description: null
+    author: finch.david@prophecy.io
+    files:
+    - pipelines/test_pipeline_2.py
+    - .prophecy/ide/pipelines/test_pipeline_2.json
+    - models/test_pipeline_2/test_pipeline_2__customer_orders.sql
+    - models/test_pipeline_2/schema.yml
+    createdAt: '2026-03-13 17:40:44'
+sqlBusinessApps:
+  .prophecy/metadata/sqlbusinessapp/test_pipeline_1_analysis:
+    name: test_pipeline_1_analysis
+    schema: null
+    description: null
+    author: finch.david@prophecy.io
+    files:
+    - apps/test_pipeline_1_analysis.json
+    createdAt: '2026-03-13 17:40:33'
+    sqlOrchestrationPipelineName: test_pipeline_1
+  .prophecy/metadata/sqlbusinessapp/test_pipeline_2_analysis:
+    name: test_pipeline_2_analysis
+    schema: null
+    description: null
+    author: finch.david@prophecy.io
+    files:
+    - apps/test_pipeline_2_analysis.json
+    createdAt: '2026-03-13 17:40:44'
+    sqlOrchestrationPipelineName: test_pipeline_2
