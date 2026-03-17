@@ -1,6 +1,6 @@
 name: transpiler_test_project
 description: ''
-version: '1'
+version: '2'
 author: finch.david@prophecy.io
 language: sql
 buildSystem: ''
