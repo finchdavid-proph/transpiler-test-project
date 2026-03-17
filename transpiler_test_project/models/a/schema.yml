@@ -1,0 +1,6 @@
+---
+version: 2
+models:
+- name: "a__order_id_integer_bigquery"
+  tags:
+  - "prophecy_temp"

@@ -1,0 +1,95 @@
+---
+version: 2
+sources:
+- name: "prophecy_field_abhinav_demos"
+  database: "prophecy-field"
+  schema: "abhinav_demos"
+  tables:
+  - name: "customers"
+    description: "Customer profiles capturing contact details, account status, and\
+      \ key identifiers for business operations."
+    config:
+      tags:
+      - "pipeline:test_pipeline_1"
+      - "pipeline:test_pipeline_2"
+      - "pipeline:a"
+    columns:
+    - name: "customer_id"
+      description: "Unique identifier assigned to each customer."
+      dataType:
+        type: "Integer"
+    - name: "first_name"
+      description: "Customer's given name."
+      dataType:
+        type: "String"
+    - name: "last_name"
+      description: "Customer's family name."
+      dataType:
+        type: "String"
+    - name: "phone"
+      description: "Customer's contact phone number."
+      dataType:
+        type: "String"
+    - name: "email"
+      description: "Customer's email address."
+      dataType:
+        type: "String"
+    - name: "country_code"
+      description: "Country code representing the customer's country of residence."
+      dataType:
+        type: "String"
+    - name: "account_open_date"
+      description: "Date when the customer's account was opened."
+      dataType:
+        type: "Date"
+    - name: "account_flags"
+      description: "Flags indicating special attributes or statuses associated with\
+        \ the customer's account."
+      dataType:
+        type: "String"
+    type: "table"
+  - name: "orders"
+    description: "Captures customer order transactions, supporting analysis of sales\
+      \ performance and order trends."
+    config:
+      tags:
+      - "pipeline:test_pipeline_1"
+      - "pipeline:test_pipeline_2"
+      - "pipeline:a"
+    columns:
+    - name: "order_id"
+      description: "Unique identifier for each order placed."
+      dataType:
+        type: "Integer"
+    - name: "customer_id"
+      description: "Unique identifier for the customer who placed the order."
+      dataType:
+        type: "Integer"
+    - name: "order_status"
+      description: "Current status of the order, such as pending, completed, or cancelled."
+      dataType:
+        type: "String"
+    - name: "order_category"
+      description: "Category or type of the order, indicating the nature of the purchase."
+      dataType:
+        type: "String"
+    - name: "order_date"
+      description: "Date when the order was placed."
+      dataType:
+        type: "Date"
+    - name: "amount"
+      description: "Total value of the order placed by the customer."
+      dataType:
+        type: "Float"
+    type: "table"
+  - name: "test_2"
+    description: "Order identifiers data used to track and reference individual transactions."
+    config:
+      tags:
+      - "pipeline:a"
+    columns:
+    - name: "order_id"
+      description: "Unique identifier for a customer order."
+      dataType:
+        type: "Integer"
+    type: "table"

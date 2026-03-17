@@ -1,0 +1,193 @@
+{
+  "id" : "a",
+  "metainfo" : {
+    "label" : "a",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : false,
+    "processesVsModelFiles" : {
+      "Rs2mmoTJZXviIp7veuxwp$$BMlLkePMsJPD8gY6qKdnz" : "models/a/a__order_id_integer_bigquery.sql",
+      "iQ0D-XKtVbIP_YP2c0DAe$$GnWwtKeiyO0TabVfPPo47" : "models/a/a__order_id_integer_bigquery.sql",
+      "kRGdkrSLGQD3-Wtpzryrc$$9ksYa_B168mONYuuYKaCE" : "models/a/a__order_id_integer_bigquery.sql",
+      "0VBxadUaAFAf7T0cYsJ56$$sOh4CRckSXQD1LIgjRd0J" : "models/a/a__order_id_integer_bigquery.sql"
+    }
+  },
+  "processes" : {
+    "iQ0D-XKtVbIP_YP2c0DAe$$GnWwtKeiyO0TabVfPPo47" : {
+      "id" : "iQ0D-XKtVbIP_YP2c0DAe$$GnWwtKeiyO0TabVfPPo47",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "customers",
+        "x" : -560,
+        "y" : -280,
+        "phase" : 0,
+        "comment" : "Overwrites the customer dataset from the source table to update the latest customer records.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        },
+        "table" : {
+          "name" : "customers",
+          "sourceType" : "Table",
+          "sourceName" : "prophecy_field_abhinav_demos",
+          "alias" : "",
+          "additionalProperties" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "MhHnXR2_X-59fMaVMa-Gf$$Swi9H4jxo-8-4QAwefkoW",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "1nzAde2X-K1IPBnvYGkzY$$CNlSC7FHyvLl4_OfMLNL-",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "0VBxadUaAFAf7T0cYsJ56$$sOh4CRckSXQD1LIgjRd0J" : {
+      "id" : "0VBxadUaAFAf7T0cYsJ56$$sOh4CRckSXQD1LIgjRd0J",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "orders",
+        "x" : -560,
+        "y" : -100,
+        "phase" : 0,
+        "comment" : "Overwrites the orders table with data from the main source to refresh the dataset for upcoming business insights.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        },
+        "table" : {
+          "name" : "orders",
+          "sourceType" : "Table",
+          "sourceName" : "prophecy_field_abhinav_demos",
+          "alias" : "",
+          "additionalProperties" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "UU6JyKR-rCdQb2tVmvaOZ$$LJ3Kbqrv9sgo1vih23rND",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "R9mBe9WNNpJ2RWFolyrfE$$66TUkYWEw2bJSEwi_wKwz",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "kRGdkrSLGQD3-Wtpzryrc$$9ksYa_B168mONYuuYKaCE" : {
+      "id" : "kRGdkrSLGQD3-Wtpzryrc$$9ksYa_B168mONYuuYKaCE",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "order_join_query",
+        "x" : -400,
+        "y" : -200,
+        "phase" : 0,
+        "comment" : "Identifies orders linked to customers by joining customer and order data.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "in1.customer_id = in0.customer_id"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in1.order_id"
+          },
+          "alias" : "order_id",
+          "_row_id" : "398676744"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "ZkvdPVfxG4tcIgyAFbJlT$$mImhcbntMZ79tvR5jQtbu##customer_id", "QrZe6b4_hDman3zZD1jyo$$9MReri0LK7ge9exLbqe-G##customer_id", "ZkvdPVfxG4tcIgyAFbJlT$$mImhcbntMZ79tvR5jQtbu##order_id" ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "QrZe6b4_hDman3zZD1jyo$$9MReri0LK7ge9exLbqe-G",
+          "slug" : "in0"
+        }, {
+          "id" : "ZkvdPVfxG4tcIgyAFbJlT$$mImhcbntMZ79tvR5jQtbu",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "hxGbYsPdJIu3Td626PxIL$$WNp_SCemhDzSKhAOyFUQL",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "Rs2mmoTJZXviIp7veuxwp$$BMlLkePMsJPD8gY6qKdnz" : {
+      "id" : "Rs2mmoTJZXviIp7veuxwp$$BMlLkePMsJPD8gY6qKdnz",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "order_id_integer_bigquery",
+        "x" : -220,
+        "y" : -200,
+        "phase" : 0,
+        "comment" : "Overwrites the test_2 table with data from prophecy_field_abhinav_demos to refresh the dataset for reporting.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "table" : {
+          "name" : "test_2",
+          "sourceType" : "Table",
+          "sourceName" : "prophecy_field_abhinav_demos",
+          "alias" : ""
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "K1PIZRJ4tGvQ2jSyvMAo3$$fhxMJtpySAIJ46o3DiFea",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "pZgmmnJE-YRYt6SHc2XD_$$cczOqHz7Lp_hPmeQWSANe",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "ufUZFnkRE3M9iHrYdX8YL$$dlULEJTRs3TJrvmcL5El7",
+    "source" : "iQ0D-XKtVbIP_YP2c0DAe$$GnWwtKeiyO0TabVfPPo47",
+    "sourcePort" : "1nzAde2X-K1IPBnvYGkzY$$CNlSC7FHyvLl4_OfMLNL-",
+    "target" : "kRGdkrSLGQD3-Wtpzryrc$$9ksYa_B168mONYuuYKaCE",
+    "targetPort" : "QrZe6b4_hDman3zZD1jyo$$9MReri0LK7ge9exLbqe-G"
+  }, {
+    "id" : "a4To4GV2LW-QzRN3_OKNY$$5Cm1pUHufBljQQlDg99C5",
+    "source" : "0VBxadUaAFAf7T0cYsJ56$$sOh4CRckSXQD1LIgjRd0J",
+    "sourcePort" : "R9mBe9WNNpJ2RWFolyrfE$$66TUkYWEw2bJSEwi_wKwz",
+    "target" : "kRGdkrSLGQD3-Wtpzryrc$$9ksYa_B168mONYuuYKaCE",
+    "targetPort" : "ZkvdPVfxG4tcIgyAFbJlT$$mImhcbntMZ79tvR5jQtbu"
+  }, {
+    "id" : "e1uk7BphFdo0zN5JYD94m$$C64ElLF9IvFOfWQyvhbyM",
+    "source" : "kRGdkrSLGQD3-Wtpzryrc$$9ksYa_B168mONYuuYKaCE",
+    "sourcePort" : "hxGbYsPdJIu3Td626PxIL$$WNp_SCemhDzSKhAOyFUQL",
+    "target" : "Rs2mmoTJZXviIp7veuxwp$$BMlLkePMsJPD8gY6qKdnz",
+    "targetPort" : "K1PIZRJ4tGvQ2jSyvMAo3$$fhxMJtpySAIJ46o3DiFea"
+  } ],
+  "component" : "Pipeline"
+}

@@ -1,0 +1,57 @@
+{
+  "id" : "a",
+  "metainfo" : {
+    "label" : "a",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : false,
+    "processesVsModelFiles" : {
+      "Rs2mmoTJZXviIp7veuxwp$$BMlLkePMsJPD8gY6qKdnz" : "models/a/a__order_id_integer_bigquery.sql",
+      "iQ0D-XKtVbIP_YP2c0DAe$$GnWwtKeiyO0TabVfPPo47" : "models/a/a__order_id_integer_bigquery.sql",
+      "kRGdkrSLGQD3-Wtpzryrc$$9ksYa_B168mONYuuYKaCE" : "models/a/a__order_id_integer_bigquery.sql",
+      "0VBxadUaAFAf7T0cYsJ56$$sOh4CRckSXQD1LIgjRd0J" : "models/a/a__order_id_integer_bigquery.sql"
+    }
+  },
+  "processes" : {
+    "Rs2mmoTJZXviIp7veuxwp$$BMlLkePMsJPD8gY6qKdnz" : {
+      "id" : "Rs2mmoTJZXviIp7veuxwp$$BMlLkePMsJPD8gY6qKdnz",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "a__order_id_integer_bigquery",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "a__order_id_integer_bigquery"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "Rs2mmoTJZXviIp7veuxwp$$BMlLkePMsJPD8gY6qKdnz", "kRGdkrSLGQD3-Wtpzryrc$$9ksYa_B168mONYuuYKaCE", "iQ0D-XKtVbIP_YP2c0DAe$$GnWwtKeiyO0TabVfPPo47", "0VBxadUaAFAf7T0cYsJ56$$sOh4CRckSXQD1LIgjRd0J" ],
+        "type" : "table",
+        "isTemporaryTable" : false,
+        "lastNodeProcessIds" : [ "Rs2mmoTJZXviIp7veuxwp$$BMlLkePMsJPD8gY6qKdnz" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "a__order_id_integer_bigquery_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "a__order_id_integer_bigquery_in_1",
+          "slug" : "in_1"
+        } ],
+        "outputs" : [ {
+          "id" : "a__order_id_integer_bigquery_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ ],
+  "component" : "Pipeline"
+}

@@ -1,0 +1,6 @@
+---
+version: 2
+models:
+- name: "test_pipeline_1__customer_orders"
+  tags:
+  - "prophecy_temp"

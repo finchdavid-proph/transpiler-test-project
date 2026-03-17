@@ -6,7 +6,7 @@
   })
 }}
 
-WITH Table_1 AS (
+WITH orders AS (
 
   SELECT * 
   
@@ -14,7 +14,7 @@ WITH Table_1 AS (
 
 ),
 
-Table_0 AS (
+customers AS (
 
   SELECT * 
   
@@ -40,22 +40,19 @@ Join_1 AS (
     in1.order_date AS order_date,
     in1.amount AS amount
   
-  FROM Table_0 AS in0
-  INNER JOIN Table_1 AS in1
+  FROM customers AS in0
+  INNER JOIN orders AS in1
      ON in1.customer_id = in0.customer_id
 
 ),
 
 customer_orders AS (
 
-  {#Lists customer orders with details such as status, date, category, and amount for each order.#}
+  {#Lists each customer's orders with their dates for tracking purchase activity.#}
   SELECT 
     customer_id AS customer_id,
     order_id AS order_id,
-    order_status AS order_status,
-    order_date AS order_date,
-    order_category AS order_category,
-    amount AS amount
+    order_date AS order_date
   
   FROM Join_1 AS in0
 
